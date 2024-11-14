@@ -1,0 +1,78 @@
+
+  /* src/Navbar.css */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #004d4D;
+  padding: 10px 20px;
+  position: fixed;
+  width: 97%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.navbar-logo-img {
+  width: 151px;
+  height: 48px;
+}
+
+.navbar-links {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-links li {
+  margin-left: 20px;
+  position: relative; /* Necesario para posicionar los submenús */
+}
+
+.navbar-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.navbar-links a:hover {
+  color: #dcae1d;
+}
+
+/* Estilos para los submenús */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  display: none; /* Por defecto, los submenús están ocultos */
+  position: absolute;
+  top: 100%;  /* Aparecen justo debajo del enlace principal */
+  left: 0;
+  background-color: #004d4D;
+  padding: 10px 0;
+  border-radius: 4px;
+  font-weight: 500;
+  list-style: none;
+}
+
+.dropdown-menu li {
+  padding: 10px 20px;
+  width: 180px;
+}
+
+.dropdown-menu li a {
+  color: white;
+  font-size: 16px;
+}
+
+.dropdown-menu li a:hover {
+  color: #dcae1d;
+}
+
+/* Mostrar el submenú al hacer hover */
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
